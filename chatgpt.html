@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Dhansetu - Bridging Your Financial Goals</title>
+  <meta name="description" content="Dhansetu - Budget planning and financial advisory for salaried individuals and small businesses.">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#072a52; /* deep blue */
+      --accent:#f0b03f; /* gold */
+      --muted:#e6eef6;
+      --card:#0b3f6b;
+      --glass: rgba(255,255,255,0.04);
+      --max-w:1100px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial,sans-serif;margin:0;background:linear-gradient(180deg,#0a3a63 0%, #072a52 100%);color:var(--muted);-webkit-font-smoothing:antialiased}
+    .container{max-width:var(--max-w);margin:0 auto;padding:28px}
+
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:64px;height:64px;border-radius:8px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--glass);padding:6px}
+    .logo img{width:100%;height:100%;object-fit:contain}
+    h1.site-title{font-size:18px;margin:0;color:var(--muted);letter-spacing:0.2px}
+    .tag{font-size:13px;color:var(--muted);opacity:0.9}
+
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    nav a.cta{background:var(--accent);color:#072a52;padding:10px 14px;border-radius:8px;margin-left:22px}
+
+    .hero{display:flex;gap:28px;align-items:center;padding:36px 0}
+    .hero-left{flex:1}
+    .eyebrow{display:inline-block;background:rgba(240,176,63,0.12);color:var(--accent);padding:6px 10px;border-radius:999px;font-weight:600;font-size:13px}
+    h2{color:white;font-size:32px;margin:14px 0 8px;line-height:1.05}
+    p.lead{color:#dbeefb;opacity:0.95;max-width:65%}
+
+    .hero-actions{margin-top:18px;display:flex;gap:12px}
+    .btn{padding:12px 18px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+    .btn-primary{background:var(--accent);color:#072a52}
+    .btn-outline{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:18px;box-shadow:0 8px 20px rgba(3,10,20,0.4)}
+
+    .hero-right{width:420px}
+    .quick{display:grid;grid-template-columns:1fr;gap:12px}
+    .quick .item{display:flex;flex-direction:column}
+    .muted{color:#c6e3fb;font-size:13px}
+
+    section.services{padding:28px 0}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .service{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:10px}
+    .service h3{margin:6px 0;color:white}
+    .service p{margin:0;color:#cfeafc;font-size:14px}
+
+    .two-col{display:grid;grid-template-columns:1fr 360px;gap:18px}
+    .about{padding:18px}
+
+    footer{padding:28px 0;border-top:1px solid rgba(255,255,255,0.03);margin-top:18px}
+    .contact-list{display:flex;flex-direction:column;gap:8px}
+    .social a{color:var(--muted);text-decoration:none}
+
+    /* registration page (will be a section shown via anchor) */
+    form.reg{display:flex;flex-direction:column;gap:12px}
+    input,textarea,select{padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--muted)}
+    input::placeholder,textarea::placeholder{color:#9fc7e9}
+
+    .note{font-size:13px;color:#c9e8ff;opacity:0.9}
+
+    /* responsive */
+    @media (max-width:900px){
+      .hero{flex-direction:column}
+      .hero-right{width:100%}
+      .services-grid{grid-template-columns:repeat(1,1fr)}
+      .two-col{grid-template-columns:1fr}
+      nav{display:none}
+      .lead{max-width:100%}
+    }
+
+    /* small tweaks for accessibility */
+    a:focus,button:focus,input:focus,textarea:focus{outline:3px solid rgba(240,176,63,0.14);outline-offset:2px}
+
+    .success{background:rgba(40,138,80,0.12);color:#bff0c1;padding:12px;border-radius:8px}
+    .hidden{display:none}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="dhansetu.jpg" alt="Dhansetu logo"></div>
+        <div>
+          <div class="site-title">Dhansetu</div>
+          <div class="tag">Bridging your Financial goals</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#register" class="cta">Register</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="hero-left">
+          <span class="eyebrow">Financial Advisory · Budget Planning · Loan facilitation</span>
+          <h2>Budget planning and financial advisory for salaried professionals and small businesses.</h2>
+          <p class="lead">We design clear budget plans. We optimise savings. We recommend long-term investment plans using mutual funds and SIPs. We help with loans and insurance where needed.</p>
+          <div class="hero-actions">
+            <button class="btn btn-primary" onclick="scrollToSection('register')">Get Started</button>
+            <a href="#services" class="btn btn-outline">Our Services</a>
+          </div>
+          <div style="margin-top:18px;color:#cfeafc;font-size:14px">Phone: <strong>+91 9058432515</strong> · Email: <strong>dhanfinance2025@gmail.com</strong></div>
+        </div>
+        <div class="hero-right card">
+          <div style="display:flex;align-items:center;justify-content:space-between">
+            <div>
+              <div class="muted">Why choose Dhansetu</div>
+              <h3 style="color:white;margin:8px 0 0">Practical plans. Clear outcomes.</h3>
+            </div>
+            <div style="text-align:right">
+              <div style="font-weight:700;color:var(--accent)">Trusted</div>
+              <div class="muted">Salaried & small business focus</div>
+            </div>
+          </div>
+
+          <div style="margin-top:16px">
+            <div class="quick">
+              <div class="item card">
+                <div class="muted">Free Budget Template</div>
+                <div style="font-weight:700;color:white;margin-top:8px">Download and start in 20 minutes</div>
+              </div>
+              <div class="item card">
+                <div class="muted">Personalised Roadmap</div>
+                <div style="font-weight:700;color:white;margin-top:8px">SIP, mutual funds, insurance mix</div>
+              </div>
+              <div class="item card">
+                <div class="muted">Loan Assistance</div>
+                <div style="font-weight:700;color:white;margin-top:8px">Pre-checks and facilitation</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="services">
+        <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px">
+          <h2 style="margin:0;color:white">Services</h2>
+          <div class="note">Designed for salaried individuals and small business owners</div>
+        </div>
+        <div class="services-grid">
+          <div class="service card">
+            <h3>Budget Planning</h3>
+            <p>Create realistic monthly budgets. Track cashflow. Set saving goals and automated rules.</p>
+          </div>
+          <div class="service card">
+            <h3>Investment Advisory</h3>
+            <p>Mutual fund selection. SIP planning. Risk profiling and portfolio allocation.</p>
+          </div>
+          <div class="service card">
+            <h3>Loan Facilitation</h3>
+            <p>Loan pre-checks. Matching with lenders. Paperwork support and negotiation guidance.</p>
+          </div>
+          <div class="service card">
+            <h3>Insurance Solutions</h3>
+            <p>Term insurance, health insurance and product comparisons tailored to your needs.</p>
+          </div>
+          <div class="service card">
+            <h3>Debt Management</h3>
+            <p>Consolidation advice. EMI optimization and prioritized repayment schedules.</p>
+          </div>
+          <div class="service card">
+            <h3>Small Business Advisory</h3>
+            <p>Cashflow planning, expense control, and simple bookkeeping set-up for SMBs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="two-col">
+        <div class="about card">
+          <h2 style="margin-top:0;color:white">About Dhansetu</h2>
+          <p style="color:#d7f0ff">Dhansetu focuses on practical financial planning. We work primarily with salaried individuals and small business owners. Our process is simple. We assess current finances. We design a 3 to 12 month plan. We help implement investments and provide follow-up check-ins.</p>
+
+          <h3 style="color:white;margin-top:18px">Process</h3>
+          <ol style="color:#cfeafc">
+            <li>Initial registration and financial data collection.</li>
+            <li>Risk and goals assessment.</li>
+            <li>Personalised budget and investment plan.</li>
+            <li>Implementation support and quarterly review.</li>
+          </ol>
+        </div>
+
+        <aside class="card">
+          <h3 style="color:white;margin-top:0">Quick facts</h3>
+          <div class="contact-list">
+            <div class="muted"><strong>Phone</strong> · +91 9058432515</div>
+            <div class="muted"><strong>Email</strong> · dhanfinance2025@gmail.com</div>
+            <div class="muted"><strong>Follow</strong> · <a class="social" href="https://www.twitter.com/dhansetu2025?igsh=MXM1em1mbTRtcWhwMg==" target="_blank">Twitter / X</a></div>
+          </div>
+
+          <div style="margin-top:18px">
+            <h4 style="color:white;margin:0">Fees</h4>
+            <p class="muted">We offer a free initial consultation. Pricing depends on scope. Typical budgeting and advisory packages start from modest monthly fees or one-time project fees for small business plans.</p>
+          </div>
+        </aside>
+      </section>
+
+      <section id="register" style="padding:18px 0">
+        <div class="card">
+          <h2 style="margin-top:0;color:white">Register / Request a Consultation</h2>
+          <p class="muted">Complete the short form. We will contact you within 48 hours for a free consultation.</p>
+          <div id="form-success" class="success hidden">Thank you. Your request has been recorded. We will contact you shortly.</div>
+          <form class="reg" id="leadForm" onsubmit="handleSubmit(event)">
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+              <input id="name" type="text" placeholder="Full name" required>
+              <input id="phone" type="tel" placeholder="Phone (+91...)" pattern="[+0-9\s-]{7,20}" required>
+            </div>
+            <input id="email" type="email" placeholder="Email" required>
+            <select id="clientType" required>
+              <option value="">I am a...</option>
+              <option value="salaried">Salaried individual</option>
+              <option value="smallbiz">Small business owner</option>
+            </select>
+            <textarea id="message" rows="4" placeholder="Briefly describe your need (optional)"></textarea>
+            <div style="display:flex;gap:12px;align-items:center">
+              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="button" class="btn btn-outline" onclick="fillSample()">Fill sample</button>
+              <div class="note">We store leads locally for demo. Replace with server endpoint when deploying.</div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap">
+        <div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div class="logo" style="width:52px;height:52px"><img src="dhansetu.jpg" alt="logo"></div>
+            <div>
+              <div style="color:white;font-weight:700">Dhansetu</div>
+              <div class="muted">Bridging your Financial goals</div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="contact-list">
+            <div class="muted">Phone: +91 9058432515</div>
+            <div class="muted">Email: dhanfinance2025@gmail.com</div>
+            <div class="muted">Twitter: <a href="https://www.twitter.com/dhansetu2025?igsh=MXM1em1mbTRtcWhwMg==" target="_blank">@dhansetu2025</a></div>
+          </div>
+        </div>
+        <div style="min-width:200px">
+          <div style="color:#cfeafc;font-weight:700">Office hours</div>
+          <div class="muted">Mon-Fri · 10:00 — 18:00</div>
+        </div>
+      </div>
+      <div style="margin-top:18px;color:#9fc7e9;font-size:13px">© Dhansetu · All rights reserved</div>
+    </footer>
+  </div>
+
+  <script>
+    // Simple client-side lead capture demo. Replace with real endpoint when available.
+    function scrollToSection(id){
+      document.getElementById(id).scrollIntoView({behavior:'smooth',block:'start'});
+    }
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const type = document.getElementById('clientType').value;
+      const message = document.getElementById('message').value.trim();
+
+      if(!name || !phone || !email || !type){
+        alert('Please complete required fields.');
+        return;
+      }
+
+      const lead = {name,phone,email,type,message,timestamp:new Date().toISOString()};
+
+      // store leads locally for demo
+      const existing = JSON.parse(localStorage.getItem('dhansetu_leads') || '[]');
+      existing.push(lead);
+      localStorage.setItem('dhansetu_leads', JSON.stringify(existing));
+
+      document.getElementById('form-success').classList.remove('hidden');
+      setTimeout(()=>document.getElementById('form-success').classList.add('hidden'),6000);
+      document.getElementById('leadForm').reset();
+      console.log('Lead saved (demo):',lead);
+    }
+
+    function fillSample(){
+      document.getElementById('name').value='Rahul Sharma';
+      document.getElementById('phone').value='+91 9876543210';
+      document.getElementById('email').value='rahul@example.com';
+      document.getElementById('clientType').value='salaried';
+      document.getElementById('message').value='I need help planning a monthly budget and SIP recommendations.';
+    }
+  </script>
+</body>
+</html>
